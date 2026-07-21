@@ -1,0 +1,46 @@
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar__inner">
+
+    <div class="sidebar__brand">
+      <div class="sidebar__avatar">
+        <span class="sidebar__ring" aria-hidden="true"></span>
+        <div class="sidebar__photo-wrap">
+          {% if site.data.leader.photo %}
+          <img src="{{ site.data.leader.photo | relative_url }}" alt="{{ site.data.leader.name }}"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+          <div class="sidebar__mono" style="display:none;">WK</div>
+          {% else %}
+          <div class="sidebar__mono">WK</div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="sidebar__name">{{ site.data.leader.name }}</div>
+      <div class="sidebar__role">{{ site.data.leader.role }}</div>
+      <div class="sidebar__loc">{{ site.data.leader.location }}</div>
+    </div>
+
+    <div class="sidebar__block">
+      <h4>Affiliations</h4>
+      {% for a in site.data.leader.affiliations %}
+      <div class="sidebar__affil">
+        <div class="sidebar__affil-title">{{ a.title }}</div>
+        <div class="sidebar__affil-org">{{ a.org }}</div>
+        <div class="sidebar__affil-note">{{ a.note }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="sidebar__block">
+      <h4>Contact</h4>
+      <a class="sidebar__link" href="mailto:{{ site.data.leader.contact.general_email }}">{{ site.data.leader.contact.general_email }}</a>
+      <a class="sidebar__link" href="mailto:{{ site.data.leader.contact.business_email }}">{{ site.data.leader.contact.business_email }}</a>
+      <a class="sidebar__link" href="https://{{ site.data.leader.contact.website }}">{{ site.data.leader.contact.website }}</a>
+      <a class="sidebar__link" href="https://{{ site.data.leader.contact.personal }}">{{ site.data.leader.contact.personal }}</a>
+      <div class="sidebar__socials">
+        <span>IG · {{ site.data.leader.contact.instagram }}</span>
+        <span>FB · {{ site.data.leader.contact.facebook }}</span>
+      </div>
+    </div>
+
+  </div>
+</aside>
