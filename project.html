@@ -1,0 +1,78 @@
+---
+sidebar: true
+layout: default
+title: "The Project"
+permalink: /project/
+description: "Encofarms Foundation and its flagship ALSIPOP programme — building sustainable, legal, and profitable crop systems across Northeast India."
+---
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Who we are</span>
+      <h1>Northeast India is our identity.<br><span class="ink-orange">The future is our work.</span></h1>
+    </div>
+
+    <div class="split reveal">
+      <div>
+        <p>{{ site.data.project.name }} is a Section 8 NGO and the parent entity for community development programmes across Northeast India. We work at the intersection of agriculture, horticulture, livelihood creation, youth empowerment, and environmental stewardship — building sustainable futures for communities that have long held this land.</p>
+        <p>Our flagship programme, <strong>ALSIPOP</strong> (Alternative Sources of Income for Poppy Planters), supports poppy-farming communities in transitioning to alternative, legal, and profitable crop systems. From coffee to cardamom, agarwood to avocado — we build with permanence in mind.</p>
+      </div>
+      <div>
+        <div class="impact">
+          {% for stat in site.data.project.stats %}
+          <div class="impact__item">
+            <div class="impact__figure" style="color:var(--orange);">{{ stat.figure }}</div>
+            <div class="impact__label">{{ stat.label }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMME PILLARS ============ -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Four pillars, one land.</h2>
+    </div>
+    <div class="pillars">
+      {% for p in site.data.project.programs %}
+      <div class="pillar reveal">
+        <span class="pillar__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <h3 class="pillar__name">{{ p.name }}</h3>
+        <p class="pillar__body">{{ p.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ CROP PORTFOLIO ============ -->
+<section class="section section--green">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The ALSIPOP portfolio</span>
+      <h2>Anchored in coffee.<br>Diversified for dignity.</h2>
+      <p style="color:#d7d3ba; max-width:620px;">High-value crop systems chosen for durability, market demand, and the ecology of the hills — built crop by crop, family by family.</p>
+    </div>
+    <div class="crops reveal">
+      {% for c in site.data.project.crops %}
+      <span class="crop">{{ c }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section">
+  <div class="wrap section-head center reveal">
+    <span class="eyebrow">Follow the work</span>
+    <h2>Every season, a new note from the field.</h2>
+    <p>Winson shares harvests, farmer stories, and programme milestones as they happen.</p>
+    <a class="btn btn--solid" href="{{ '/field-notes/' | relative_url }}">Read Field Notes</a>
+  </div>
+</section>

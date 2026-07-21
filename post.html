@@ -1,0 +1,70 @@
+---
+sidebar: true
+layout: default
+title: "Post an Update"
+permalink: /post/
+composer: true
+description: "Compose a new field note — add text, compress photos, and embed a YouTube video."
+---
+
+<section class="section">
+  <div class="wrap composer">
+    <div class="section-head reveal">
+      <span class="eyebrow">Composer</span>
+      <h1>Post a field note.</h1>
+      <p style="color:var(--ink-soft);">Write your update, drop in photos (they’re compressed right here in your browser), and paste a YouTube link. Then copy the generated file into your repository — that’s it.</p>
+    </div>
+
+    <div class="field">
+      <label for="cDate">Date</label>
+      <input type="date" id="cDate">
+    </div>
+
+    <div class="field">
+      <label for="cPlace">Place <span class="hint">(optional — e.g. Ukhrul, Manipur)</span></label>
+      <input type="text" id="cPlace" placeholder="Ukhrul, Manipur">
+    </div>
+
+    <div class="field">
+      <label for="cText">What’s happening? <span class="hint">Plain text or Markdown (**bold**, [links](https://…))</span></label>
+      <textarea id="cText" placeholder="Queen Victoria pineapples went out this morning — 40 crates, chemical-free, straight to market…"></textarea>
+    </div>
+
+    <div class="field">
+      <label>Photos <span class="hint">Compressed to ~1600px JPEG. Download each and place it in <code>assets/updates/</code>.</span></label>
+      <div class="dropzone" id="drop">
+        <strong>Click to choose photos</strong> or drag them here
+        <input type="file" id="cFiles" accept="image/*" multiple hidden>
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+
+    <div class="field">
+      <label for="cYT">YouTube link <span class="hint">(optional — full URL or share link)</span></label>
+      <input type="text" id="cYT" placeholder="https://www.youtube.com/watch?v=…">
+    </div>
+
+    <div class="field">
+      <label for="cTags">Tags <span class="hint">(optional, comma-separated)</span></label>
+      <input type="text" id="cTags" placeholder="pineapple, harvest, ALSIPOP">
+    </div>
+
+    <button class="btn btn--solid" id="cGen" type="button">Generate post file</button>
+
+    <div class="output" id="cOutBox" style="display:none;">
+      <h3>Your post file</h3>
+      <p style="color:#d7d3ba; font-size:.9rem;">Save this as <code style="color:var(--amber);" id="cFilename">_updates/…</code></p>
+      <textarea id="cOut" readonly></textarea>
+      <button class="btn btn--ghost" id="cCopy" type="button" style="margin-top:12px; border-color:var(--amber); color:var(--amber);">Copy file contents</button>
+    </div>
+
+    <div class="steps" style="margin-top:34px;">
+      <h3>How to publish</h3>
+      <ol>
+        <li>Download each photo above and drop the files into your repo’s <code>assets/updates/</code> folder.</li>
+        <li>Create a new file in <code>_updates/</code> using the filename shown, and paste the generated contents into it.</li>
+        <li>Commit &amp; push. GitHub Pages rebuilds and the post appears at the top of <a href="{{ '/field-notes/' | relative_url }}">Field Notes</a>.</li>
+      </ol>
+    </div>
+  </div>
+</section>
