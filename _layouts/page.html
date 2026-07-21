@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<section class="section">
+  <div class="wrap">
+    {% if page.eyebrow %}<span class="eyebrow">{{ page.eyebrow }}</span>{% endif %}
+    {% if page.heading %}<h1>{{ page.heading }}</h1>{% endif %}
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+</section>

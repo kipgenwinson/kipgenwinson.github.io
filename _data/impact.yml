@@ -1,0 +1,29 @@
+# ─────────────────────────────────────────────────────────────
+#  IMPACT NUMBERS + RECOGNITION  (from the CV)
+# ─────────────────────────────────────────────────────────────
+
+# Big numbers shown on the home page. Keep them short.
+impact:
+  - figure: "1,500+"
+    label: "Farmers connected to markets"
+  - figure: "700+"
+    label: "Farmers directly benefiting"
+  - figure: "350T"
+    label: "Organic pineapple airlifted"
+  - figure: "200+"
+    label: "Women farmers under MOMA"
+
+# Awards & milestones — a real, dated sequence (newest last)
+recognition:
+  - year: "2017"
+    title: "Top 15 Startup"
+    body: "Dhriiti NE Startup — recognised among leading early-stage ventures in the Northeast ecosystem."
+  - year: "2018"
+    title: "Best Business Pitch"
+    body: "Global Shapers Imphal Hub with India Network — awarded a sponsored trip to Los Angeles, CA."
+  - year: "2018"
+    title: "Top 50 India Startup"
+    body: "IIM Calcutta — selected for incubation support from a national applicant pool."
+  - year: "2019"
+    title: "Top 10 NE Agri Startup"
+    body: "Indigramlabs, Delhi — selected for a six-month incubation in agricultural innovation."

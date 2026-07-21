@@ -1,0 +1,116 @@
+---
+layout: default
+title: null
+---
+
+{% include hero.html %}
+
+<!-- ============ IMPACT ============ -->
+<section class="section section--tint" id="impact">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Impact at a glance</span>
+      <h2>Village to national market.</h2>
+    </div>
+    <div class="impact reveal">
+      {% for stat in site.data.impact.impact %}
+      <div class="impact__item">
+        <div class="impact__figure">{{ stat.figure }}</div>
+        <div class="impact__label">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT THE LEADER ============ -->
+<section class="section" id="about">
+  <div class="wrap leader">
+    <div class="leader__portrait reveal">
+      {% if site.data.leader.photo %}
+      <img src="{{ site.data.leader.photo | relative_url }}" alt="{{ site.data.leader.name }}"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+      <div class="leader__monogram" style="display:none;">WK</div>
+      {% else %}
+      <div class="leader__monogram">WK</div>
+      {% endif %}
+      <span class="frame-tag">{{ site.data.leader.location }}</span>
+    </div>
+
+    <div class="leader__about reveal">
+      <span class="eyebrow">Who is Winson</span>
+      <h2>Building futures where the land&nbsp;is.</h2>
+
+      <div class="affil">
+        {% for a in site.data.leader.affiliations %}
+        <div class="affil__item">
+          <div class="affil__title">{{ a.title }}</div>
+          <div class="affil__org">{{ a.org }}</div>
+          <div class="affil__note">{{ a.note }}</div>
+        </div>
+        {% endfor %}
+      </div>
+
+      {% for para in site.data.leader.bio %}
+      <p>{{ para }}</p>
+      {% endfor %}
+
+      <span class="eyebrow" style="margin-top:14px;">Focus areas</span>
+      <div class="chips">
+        {% for f in site.data.leader.focus_areas %}
+        <span class="chip">{{ f }}</span>
+        {% endfor %}
+      </div>
+
+      <p style="margin-top:26px; font-family:var(--font-mono); font-size:.82rem; color:var(--ink-soft);">
+        {% for e in site.data.leader.education %}{{ e.degree }} · {{ e.school }}{% endfor %}
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="leaf-divider" aria-hidden="true">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17 3c-5 0-9 3.5-11 8-1 2.5-1 5.5-1 8 2.5 0 5.5 0 8-1 4.5-2 8-6 8-11 0-1.5-.2-3-1-4-1 .8-2.5 1-4 1z"/></svg>
+</div>
+
+<!-- ============ RECOGNITION ============ -->
+<section class="section section--green" id="recognition">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Recognition &amp; milestones</span>
+      <h2>A track record, year by year.</h2>
+    </div>
+    <div class="timeline reveal">
+      {% for r in site.data.impact.recognition %}
+      <div class="timeline__item">
+        <div class="timeline__year">{{ r.year }}</div>
+        <div class="timeline__title">{{ r.title }}</div>
+        <p class="timeline__body">{{ r.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT TEASER ============ -->
+<section class="section section--tint" id="project-teaser">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">The Project</span>
+      <h2>{{ site.data.project.name }}</h2>
+      <p>{{ site.data.project.kind }}</p>
+      <p>Our flagship programme, <strong>ALSIPOP</strong>, supports poppy-farming communities in transitioning to alternative, legal, and profitable crop systems — from coffee to cardamom, agarwood to avocado.</p>
+      <a class="btn btn--solid" href="{{ '/project/' | relative_url }}">Explore the project</a>
+    </div>
+    <div class="reveal">
+      <div class="impact">
+        {% for stat in site.data.project.stats %}
+        <div class="impact__item">
+          <div class="impact__figure" style="color:var(--orange);">{{ stat.figure }}</div>
+          <div class="impact__label">{{ stat.label }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

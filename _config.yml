@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────────────────────────
+#  Encofarms / Winson Kipgen — site configuration
+#  Edit the values below. No HTML/CSS knowledge required.
+# ─────────────────────────────────────────────────────────────
+
+title: "Winson Kipgen"
+tagline: "Empowering nature and communities through farming, agriculture, regeneration and mutual stewardship."
+description: "Winson Kipgen — social entrepreneur and development leader building sustainable, legal, and profitable livelihoods for farming communities across Northeast India."
+
+# If you deploy to  https://<username>.github.io/<repo>/  set:
+#   baseurl: "/<repo>"
+# If you deploy to a root domain (e.g. encofarms.org) leave it empty.
+baseurl: ""
+url: "https://encofarms.org"
+
+# Contact shown in the footer / contact section
+email: "hello@encofarms.org"
+
+# ── Build settings ────────────────────────────────────────────
+markdown: kramdown
+permalink: pretty
+
+collections:
+  updates:
+    output: false        # Field Notes are rendered on the timeline page, not as separate pages
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

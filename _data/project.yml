@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────────────────────
+#  THE PROJECT  —  Encofarms Foundation & ALSIPOP
+# ─────────────────────────────────────────────────────────────
+
+name: "Encofarms Foundation"
+kind: "A Section 8 non-profit — the parent entity for community development programmes across Northeast India."
+
+# Headline stats for the project page
+stats:
+  - figure: "17+"
+    label: "Crops in portfolio"
+  - figure: "50k+"
+    label: "Farmers to empower"
+  - figure: "8"
+    label: "States of the Northeast"
+
+# The four programme pillars (numbered — this is a real set of programmes)
+programs:
+  - name: "Agriculture & Horticulture"
+    body: "From coffee as our anchor crop to agarwood, cardamom, vanilla, kiwi, and avocado — we build diverse, high-value crop systems that create lasting economic foundations for farming communities."
+  - name: "Alternative Livelihoods — ALSIPOP"
+    body: "Our flagship programme transitions poppy-farming communities toward sustainable, legal, and profitable alternatives. Economic dignity, not dependency — built crop by crop, family by family."
+  - name: "Youth & Agri-Entrepreneurship"
+    body: "Young people in Northeast India deserve futures here. We skill, connect, and back the next generation of agri-entrepreneurs — turning farming into a profession worth staying for."
+  - name: "Conservation & Cultural Stewardship"
+    body: "Gender equality, environmental conservation, cultural preservation, and historical documentation. The land and its people are inseparable — and both deserve to be protected."
+
+# The ALSIPOP crop portfolio
+crops:
+  - "Coffee (anchor)"
+  - "Agarwood"
+  - "Vanilla"
+  - "Cardamom"
+  - "King chilli"
+  - "Ginger"
+  - "Turmeric"
+  - "Passion fruit"
+  - "Kiwi"
+  - "Avocado"
