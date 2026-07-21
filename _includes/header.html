@@ -1,0 +1,23 @@
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand__mark">WK</span>
+      <span class="brand__name">
+        {{ site.data.leader.name }}
+        <small>Encofarms · Northeast India</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="{{ '/' | relative_url }}"           {% if page.url == '/' %}class="is-active"{% endif %}>Home</a>
+      <a href="{{ '/project/' | relative_url }}"    {% if page.url contains 'project' %}class="is-active"{% endif %}>The Project</a>
+      <a href="{{ '/field-notes/' | relative_url }}"{% if page.url contains 'field-notes' %}class="is-active"{% endif %}>Field Notes</a>
+      <a href="{{ '/contact/' | relative_url }}"    {% if page.url contains 'contact' %}class="is-active"{% endif %}>Contact</a>
+      <a class="nav__cta" href="{{ '/field-notes/' | relative_url }}">Latest updates</a>
+    </nav>
+  </div>
+</header>

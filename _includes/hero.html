@@ -1,0 +1,49 @@
+<section class="hero">
+  <div class="hero__sun"></div>
+
+  <!-- drifting leaves injected by main.js -->
+  <div class="hero__leaves" id="leaves" aria-hidden="true"></div>
+
+  <!-- layered hills, recoloured for the emerald night -->
+  <div class="hero__hills" aria-hidden="true">
+    <svg viewBox="0 0 1440 420" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="hill-sway slow" fill="#0c4a34" d="M0,300 C180,240 320,220 480,258 C660,300 820,210 1020,244 C1200,274 1320,250 1440,262 L1440,420 L0,420 Z"/>
+      <path class="hill-sway" fill="#0a3d2b" d="M0,330 C160,300 300,286 470,312 C640,338 820,286 1010,318 C1200,350 1330,320 1440,330 L1440,420 L0,420 Z"/>
+      <path fill="#083023" d="M0,362 C200,342 360,352 540,368 C740,386 900,352 1090,368 C1260,382 1360,368 1440,372 L1440,420 L0,420 Z"/>
+      <path fill="#05241a" d="M0,392 C220,382 420,388 640,394 C860,400 1040,388 1230,394 C1330,397 1400,393 1440,394 L1440,420 L0,420 Z"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <span class="eyebrow hero__eyebrow">Encofarms · ALSIPOP · Northeast India</span>
+      <h1 class="hero__title">{{ site.data.leader.name }}</h1>
+      <p class="hero__role">{{ site.data.leader.role }}</p>
+      <p class="hero__lede">{{ site.data.leader.lede }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="{{ '/field-notes/' | relative_url }}">Field Notes</a>
+        <a class="btn btn--ghost" href="{{ '/project/' | relative_url }}">The Project</a>
+      </div>
+    </div>
+
+    <div class="hero__portrait">
+      <span class="hero__ring" aria-hidden="true"></span>
+      <svg class="hero__leaf-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3c-5 0-9 3.5-11 8-1 2.5-1 5.5-1 8 2.5 0 5.5 0 8-1 4.5-2 8-6 8-11 0-1.5-.2-3-1-4-1 .8-2.5 1-4 1z"/></svg>
+      <div class="hero__frame">
+        {% if site.data.leader.photo %}
+        <img src="{{ site.data.leader.photo | relative_url }}" alt="{{ site.data.leader.name }}"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+        <div class="hero__fallback" style="display:none;">WK</div>
+        {% else %}
+        <div class="hero__fallback">WK</div>
+        {% endif %}
+        <span class="hero__badge">{{ site.data.leader.location }}</span>
+      </div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#impact" aria-label="Scroll down">
+    <span>Scroll</span>
+    <svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1v16M2 11l6 6 6-6" stroke="#AEBDA5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
