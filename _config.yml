@@ -11,7 +11,7 @@ description: "Winson Kipgen — social entrepreneur and development leader build
 #   baseurl: "/<repo>"
 # If you deploy to a root domain (e.g. encofarms.org) leave it empty.
 baseurl: ""
-url: "https://encofarms.org"
+url: "https://kipgenwinson.github.io"
 
 # Contact shown in the footer / contact section
 email: "hello@encofarms.org"
